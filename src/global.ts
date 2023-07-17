@@ -1,7 +1,5 @@
 import { styled } from "styled-components"
 
-type Theme = 'dark' | 'light'
-
 export const CalculatorLayoyt = styled.div`
     width: 100%;
     display: flex;
