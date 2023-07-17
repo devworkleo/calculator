@@ -24,7 +24,11 @@
   color: #52C9DC !important;
   background-color: #212B41 !important;
 }
-.green_button {
+.primary_button_dark {
+  color: #52C9DC !important;
+  background-color: #212B41 !important;
+}
+.primary_button_light {
   color: white !important;
   background-color: #52C9DC !important;
 }
