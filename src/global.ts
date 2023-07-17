@@ -31,7 +31,7 @@ export const Button = styled.button<{ color: string, background: string }>`
     font-size: 1.4em;
     font-weight: 600;
     padding: 15px 0px;
-    border-radius: 50%;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
     color: ${({ color }) => color};
@@ -93,3 +93,4 @@ export const MathAreaLayout = styled.div<{ background: string }>`
     justify-content: flex-end;
     background-color: ${({ background }) => background};
 `
+export const Number = styled.span``

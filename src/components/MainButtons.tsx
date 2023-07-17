@@ -1,19 +1,40 @@
-import { Button, ButtonSectionLayout, Line } from "../global"
+import { Button, ButtonSectionLayout, Line, Number } from "../global"
 import { PlusOutlined, CloseOutlined, MinusOutlined, PauseOutlined, PercentageOutlined } from "@ant-design/icons"
 import { FaSquareRootAlt, FaDivide, FaCircle } from "react-icons/fa"
+import { RxReload } from "react-icons/rx"
 
 export const MainButtons = ({ isDark, color, background }:{ isDark: boolean, color: string, background: string }) => {
   const items = [
     { id: 1, buttons: [
-      { label: <>C</>, theme: { className: 'dark_button' } },
-      { label: <FaSquareRootAlt />, theme: { className: 'dark_button' } },
-      { label: <PercentageOutlined />, theme: { className: 'dark_button' } },
-      { label: <FaDivide />, theme: { className: 'dark_button' } }
+      { label: <>C</>, theme: { className: 'green_button' } },
+      { label: <FaSquareRootAlt />, theme: { className: 'green_button' } },
+      { label: <PercentageOutlined />, theme: { className: 'green_button' } },
+      { label: <FaDivide />, theme: { className: 'green_button' } }
     ] },
-    { id: 2, buttons: [{ label: <>7</> }, { label: <>8</> }, { label: <>9</> }, { label: <CloseOutlined />, theme: { className: 'dark_button' } }] },
-    { id: 3, buttons: [{ label: <>4</> }, { label: <>5</>}, { label: <>6</> }, { label: <MinusOutlined />, theme: { className: 'dark_button' } }] },
-    { id: 4, buttons: [{ label: <>1</> }, { label: <>2</> }, { label: <>3</> }, { label: <PlusOutlined />, theme: { className: 'dark_button' } }] },
-    { id: 5, buttons: [{ label: <>0</> }, { label: <FaCircle className="circle" /> }, { label: null }, { label: <PauseOutlined className="rotate" />, theme: { className: 'green_button' } }] },
+    { id: 2, buttons: [
+      { label: <Number>7</Number> },
+      { label: <Number>8</Number> },
+      { label: <Number>9</Number> },
+      { label: <CloseOutlined />, theme: { className: 'green_button' } }
+    ] },
+    { id: 3, buttons: [
+      { label: <Number>4</Number> },
+      { label: <Number>5</Number>},
+      { label: <Number>6</Number> },
+      { label: <MinusOutlined />, theme: { className: 'green_button' } }
+    ] },
+    { id: 4, buttons: [
+      { label: <Number>1</Number> },
+      { label: <Number>2</Number> },
+      { label: <Number>3</Number> },
+      { label: <PlusOutlined />, theme: { className: 'green_button' } }
+    ] },
+    { id: 5, buttons: [
+      { label: <RxReload className='rxdeg' /> },
+      { label: <>0</> },
+      { label: <FaCircle className="circle" /> },
+      { label: <PauseOutlined className="rotate" />, theme: { className: 'green_button' } }
+    ] },
   ]
   return <ButtonSectionLayout>
     { items.map(item => (<Line key={item.id}>
@@ -21,8 +42,8 @@ export const MainButtons = ({ isDark, color, background }:{ isDark: boolean, col
         key={index}
         color={color}
         background={background}
+        className={button?.theme?.className}
         style={button.label === null ? { visibility: 'hidden' } : { display: 'flex' }}
-        className={isDark ? button?.theme?.className : ''}
       >
         { button.label }
       </Button>)) }

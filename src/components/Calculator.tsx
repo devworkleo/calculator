@@ -19,7 +19,7 @@ export const Calculator = () => {
         <MainButtons
           isDark={isDark}
           color={isDark ? '#F4FDFB ' : '#373E47'}
-          background={isDark ? '#2E3951' : '#F4FDFB'}
+          background={isDark ? '#2E3951' : '#F2F8FC'}
         />
       </CalculatorButtons>
     </CalculatorFlutter>
